@@ -1,29 +1,29 @@
-for(int i = 0; i < 60;)
+for(int dakika = 0; dakika < 60;)
 {
 b:;
-    if (i == 60)
+    if (dakika == 60)
     {
         goto a;
         //dakika 60'a ulaşınca a konumuna gider
     }
     else
     {
-        for(int j = 0; j <= 60;) 
+        for(int saniye = 0; saniye <= 60;) 
         { 
-        if (j == 60)
+        if (saniye == 60)
             {
-                i++;
-                j = 0;
+                dakika++;
+                saniye = 0;
                 goto b;
-                //i(dakika) sayısını arttırıp j(saniye) sayısını sıfırlar ve b konumuna gider
+                //dakika sayısını arttırıp saniye sayısını sıfırlar ve b konumuna gider
             }
         else
           {
                 System.Threading.Thread.Sleep(1000);
-                j++;
+                saniye++;
                 Console.Clear();
-                Console.WriteLine(i + ":" + j);
-                //j(saniye) sayısını arttırdıktan sonra konsolu temizler ve ekrana dakika : saniye şeklinde yazar
+                Console.WriteLine(dakika + ":" + saniye);
+                //saniye sayısını arttırdıktan sonra konsolu temizler ve ekrana dakika : saniye şeklinde yazar
 
           }
 
